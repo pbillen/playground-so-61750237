@@ -14,7 +14,7 @@ public class MyAspect {
     @Context
     private ContainerRequest request;
 
-    @Pointcut("@annotation(so.MyTransactional)")
+    @Pointcut("@annotation(so.MyAnnotation)")
     public void transactional() {
     }
 
