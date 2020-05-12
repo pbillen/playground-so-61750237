@@ -15,10 +15,10 @@ public class MyAspect {
     private ContainerRequest request;
 
     @Pointcut("@annotation(so.MyAnnotation)")
-    public void transactional() {
+    public void annotated() {
     }
 
-    @Before("transactional()")
+    @Before("annotated()")
     public void test() {
         System.out.println(Thread.currentThread() + ": I need access to the HTTP headers: " + request);
     }
