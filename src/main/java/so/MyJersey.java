@@ -1,7 +1,6 @@
 package so;
 
 import org.glassfish.jersey.server.ResourceConfig;
-import so.controller.MyController;
 
 import javax.ws.rs.ApplicationPath;
 
@@ -9,6 +8,5 @@ import javax.ws.rs.ApplicationPath;
 public class MyJersey extends ResourceConfig {
     public MyJersey() {
         packages("so");
-        register(MyController.class);
     }
 }
