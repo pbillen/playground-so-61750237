@@ -14,11 +14,11 @@ public class MyAspect {
     @Context
     private ContainerRequest request;
 
-    @Pointcut("within(so.service..*)")
-    public void every() {
+    @Pointcut("@annotation(so.MyTransactional)")
+    public void transactional() {
     }
 
-    @Before("every()")
+    @Before("transactional()")
     public void test() {
         System.out.println(Thread.currentThread() + ": I need access to the HTTP headers: " + request);
     }
