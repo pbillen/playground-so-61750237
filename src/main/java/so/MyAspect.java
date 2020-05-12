@@ -4,12 +4,12 @@ import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
 import org.glassfish.jersey.server.ContainerRequest;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
 import javax.ws.rs.core.Context;
 
 @Aspect
-@Service
+@Component
 public class MyAspect {
     @Context
     private ContainerRequest request;
